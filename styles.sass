@@ -1,0 +1,217 @@
+body
+  color: beige
+
+header
+  background-color: rgba(126, 164, 146, 1)
+  width: 60vw
+  height: 10vh
+  margin: 20px auto 10px auto
+  border: 5px double lightblue
+  box-sizing: border-box
+  .container
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 25px
+    font-size: 20px
+    .last-updated
+      width: 350px
+      text-align: center
+      p
+        margin: 0
+        font-style: italic
+        font-size: 18px
+        color: rgba(0, 0, 0, 0.7)
+        font-weight: 700
+    .nav-bar
+      width: 35%
+      display: flex
+      justify-content: space-evenly
+      font-size: 22px
+      font-weight: 900
+      color:  rgba(255, 255, 255, 0.6)
+      a
+        text-decoration: none
+        color: rgba(255, 255, 255, 0.6)
+      .underline
+        text-decoration: underline
+        text-decoration-color:  rgba(255, 255, 255, 0.6)
+        text-underline-offset: 0.3em
+        text-decoration-thickness: 2px
+
+section
+  display: none
+
+section.active
+  display: block
+  .container
+    width: 60vw
+    height: 80vh
+    background-color: rgba(126, 164, 146, 1)
+    margin: 0 auto
+    box-shadow: 10px 15px 20px 5px lightblue, -10px 10px 15px 5px lightgreen
+
+#about-me
+  .container
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 0 25px
+      box-sizing: border-box
+      .image-container
+          width: 350px
+          height: 480px
+          background-color: grey
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-evenly
+          align-items: center
+          img
+              width: 100%
+              height: 100%
+          img:hover
+              box-shadow: 0px -10px 20px 10px grey, 0px 10px 20px 10px grey
+              border: 2px solid red
+      .intro-text
+        width: 55%
+        height: 480px
+        color: rgba(0, 0, 0, 0.85)
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        p
+          margin: 0 0 15px 0
+          font-size: 18px
+          text-align: justify
+          line-height: 28px
+
+
+
+
+
+
+.flower
+  width: 15px
+  height: 15px
+  border-radius: 50%
+  z-index: 1
+  position: absolute
+  top: -20%
+
+.flower:hover
+  transform: scale(1.5)
+
+.petal
+  width: 15px
+  height: 15px
+  border-radius: 50%
+  z-index: -1
+
+.petal1
+  position: relative
+  left: -70%
+  top: 20%
+
+.petal2
+  position: relative
+  top: -18%
+  left: -5%
+
+.petal3
+  position: relative
+  top: -170%
+  left: 72%
+
+.petal4
+  position: relative
+  top: -363%
+  left: -30%
+
+.petal5
+  position: relative
+  top: -450%
+  left: 53%
+
+@mixin flower-styles($background-color, $top, $placement, $ratio)
+  position: absolute
+  background-color: $background-color
+  top: $top
+
+  @if $placement == 'left'
+    left: $ratio
+  @else if $placement == 'right'
+    right: $ratio
+
+$flower-height: 20%
+
+$flower-one-top: 7.5%
+$flower-two-top: calc(#{$flower-one-top} + #{$flower-height})
+$flower-three-top: calc(#{$flower-one-top} + 2 * #{$flower-height})
+$flower-four-top: calc(#{$flower-one-top} + 3 * #{$flower-height})
+$flower-five-top: calc(#{$flower-one-top} + 4 * #{$flower-height})
+
+$flower-top-side: 5%
+$flower-two-four-side: 13.5%
+$flower-five-side: 7.5%
+$flower-bottom-side: 5%
+
+#flower1
+  @include flower-styles(#D3D3D3, $flower-one-top, left, $flower-top-side)
+
+#flower2
+  @include flower-styles(#FFF0F5, $flower-two-top, left, $flower-two-four-side)
+
+#flower3
+  @include flower-styles(violet, $flower-three-top, left, $flower-five-side)
+
+#flower4
+  @include flower-styles(#E0FFFF, $flower-four-top, left, $flower-two-four-side)
+
+#flower5
+  @include flower-styles(red, $flower-five-top, left, $flower-bottom-side)
+
+#flower6
+  @include flower-styles(cyan, $flower-one-top, right, $flower-top-side)
+
+#flower7
+  @include flower-styles(#DEB887, $flower-two-top, right, $flower-two-four-side)
+
+#flower8
+  @include flower-styles(#F0FFF0, $flower-three-top, right, $flower-five-side)
+
+#flower9
+  @include flower-styles(magenta, $flower-four-top, right, $flower-two-four-side)
+
+#flower10
+  @include flower-styles(#FFE4E1, $flower-five-top, right, $flower-bottom-side)
+
+.f1p
+  background-color: #48D1CC
+
+.f2p
+  background-color: #FFB6C1
+
+.f3p
+  background-color: #7B68EE
+
+.f4p
+  background-color: #EEE8AA
+
+.f5p
+  background-color: #D8BFD8
+
+.f6p
+  background-color: #7B68EE
+
+.f7p
+  background-color: #F5F5DC
+
+.f8p
+  background-color: #FF69B4
+
+.f9p
+  background-color: #E6E6FA
+
+.f10p
+  background-color: #00BFFF
