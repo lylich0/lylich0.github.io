@@ -48,6 +48,13 @@ header .container .nav-bar .underline {
   text-decoration-thickness: 2px;
 }
 
+.underline {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 2px;
+}
+
 section {
   display: none;
 }
@@ -96,6 +103,36 @@ section.active .container {
   font-size: 18px;
   text-align: justify;
   line-height: 28px;
+}
+
+#blog .container {
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#blog .container .card {
+  color: rgba(0, 0, 0, 0.9);
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid black;
+}
+#blog .container .card time {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+}
+#blog .container .card a {
+  color: rgba(255, 255, 255, 0.6);
+}
+#blog .container .card p {
+  width: 80%;
+}
+#blog .container .card time {
+  width: 8%;
 }
 
 #projects .container {

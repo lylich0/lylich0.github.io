@@ -40,6 +40,12 @@ header
         text-underline-offset: 0.3em
         text-decoration-thickness: 2px
 
+.underline
+  text-decoration: underline
+  text-decoration-color:  rgba(255, 255, 255, 0.6)
+  text-underline-offset: 0.3em
+  text-decoration-thickness: 2px
+
 section
   display: none
 
@@ -85,6 +91,33 @@ section.active
           font-size: 18px
           text-align: justify
           line-height: 28px
+
+#blog
+  .container
+    height: 580px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    .card
+      //background-color: #00BFFF
+      color: rgba(0, 0, 0, 0.9)
+      padding: 0 20px
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      border-top: 1px solid black
+      time
+        font-style: italic
+        color: rgba(0, 0, 0, 0.7)
+        font-weight: 700
+      a
+        color: rgba(255, 255, 255, 0.6)
+      p
+        width: 80%
+      time
+        width: 8%
+
 
 #projects
   .container
