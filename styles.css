@@ -73,7 +73,6 @@ section.active .container {
 #about-me .container .image-container {
   width: 350px;
   height: 480px;
-  background-color: grey;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -106,6 +105,25 @@ section.active .container {
   padding-bottom: 30px;
   box-sizing: border-box;
 }
+#blog .container h3 {
+  margin: 10px 20px;
+  text-transform: uppercase;
+  color: black;
+}
+#blog .container .interests .course {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 20px;
+  color: black;
+}
+#blog .container .interests .course a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+#blog .container .interests .course img {
+  margin-right: 20px;
+}
 #blog .container .card {
   height: 80px;
   color: rgba(0, 0, 0, 0.9);
@@ -135,7 +153,7 @@ section.active .container {
   height: 580px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 #projects .container .card {
@@ -143,10 +161,9 @@ section.active .container {
   color: black;
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.5);
   width: 80%;
   margin: 10px;
-  border: 2px solid darkgreen;
+  border: 2px solid lightgrey;
 }
 #projects .container .card .header {
   display: flex;
