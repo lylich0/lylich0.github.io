@@ -40,12 +40,6 @@ header
         text-underline-offset: 0.3em
         text-decoration-thickness: 2px
 
-.underline
-  text-decoration: underline
-  text-decoration-color:  rgba(255, 255, 255, 0.6)
-  text-underline-offset: 0.3em
-  text-decoration-thickness: 2px
-
 section
   display: none
 
@@ -98,8 +92,11 @@ section.active
     display: flex
     flex-direction: column
     justify-content: flex-end
+    padding-bottom: 30px
+    box-sizing: border-box
     .card
       //background-color: #00BFFF
+      height: 80px
       color: rgba(0, 0, 0, 0.9)
       padding: 0 20px
       display: flex
@@ -124,27 +121,33 @@ section.active
     height: 580px
     display: flex
     flex-direction: column
+    justify-content: flex-end
     align-items: center
-    .online-auction
+    .card
       padding: 15px
       color: black
       display: flex
       flex-direction: column
-      background-color: white
+      background-color: rgba(255, 255, 255, 0.5)
       width: 80%
       margin: 10px
-      border: 2px solid grey
+      border: 2px solid darkgreen
       .header
         display: flex
         justify-content: space-between
         align-items: center
-        a
-          text-decoration: none
-          color: black
+      a
+        text-decoration: none
+        color: black
       p
         margin: 8px
         text-align: justify
 
+.underline
+  text-decoration: underline !important
+  text-decoration-color:  rgba(255, 255, 255, 0.6) !important
+  text-underline-offset: 0.3em
+  text-decoration-thickness: 2px
 
 .flower
   width: 15px
